@@ -58,6 +58,7 @@ export default class Logincomp extends React.Component{
                     <h1>BOAS VINDAS</h1>
                     <p>{this.state.name}</p>
                     <p>Seja Bem-Vindo a sua conta personalizada</p>
+                    <Link to="/login" style={{  backgroundColor: "#000080;", borderRadius: "5px" ,borderStyle:"double", padding: "10px", fontsize: "20px"}}>Voltar</Link>
                 </DIV>
             );
         }

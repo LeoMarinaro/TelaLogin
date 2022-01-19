@@ -24,17 +24,20 @@ export default class Logincomp extends React.Component{
         this.e = document.getElementById('EMAIL').value;
         this.s = document.getElementById('SENHA').value;
         const query = new Parse.Query('Cont');
-        if(query.equalTo('email', this.e) && query.equalTo('senha', this.s)){
-            const Person = await query.first();
+        query.equalTo('email', this.e)
+        query.equalTo('senha', this.s)
+        const Person = await query.first();
+        if(Person !== undefined){
             this.nome =  Person.get('name');
             this.email = Person.get('email');
             this.senha = Person.get('senha');
             this.setState({chave: 1});
-            this.setState({name: this.nome});
+            this.setState({name: this.nome}); 
         }
         else{
             alert("Usuario não encontrado");
         }
+    
       }
 
     render(){

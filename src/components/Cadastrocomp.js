@@ -31,7 +31,7 @@ export default class Cadastrocomp extends React.Component{
             }
         }
         else{
-            alert("Impossivel Registrar Conta")
+            alert("Impossivel Registrar Conta!")
         }
     }
 
